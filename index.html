@@ -1,24 +1,143 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1"/>
-        <link rel="stylesheet" href="./resources/styles/normalize.css" type="text/css"/>
-        <link rel="stylesheet" href="./resources/styles/style.css" type="text/css"/>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./resources/styles/normalize.css" type="text/css">
+        <link rel="stylesheet" href="./resources/styles/style.css" type="text/css">
+        <link rel="apple-touch-icon" sizes="180x180" href="./resources/img/favicon/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="./resources/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="./resources/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="./resources/img/favicon/site.webmanifest">
         <title>Mateusz Kuchnia | Full-stack web developer</title>
     </head>
     <body>
+        <!-- Header -->
         <header>
+            <a>
+                <div class="logo">
+                    <h1><i>M</i>ateusz <i>K</i>uchnia</h1>
+                    <p>Full-stack <span class="rotate">web</span> developer</p>
+                </div>
+            </a>
             <nav>
-                <div class="page-link" dest="about">about</div>
-                <div class="page-link" dest="portfolio">portfolio</div>
-                <div class="page-link" dest="contact">contact</div>
+                <a href="#about">about</a>
+                <a href="#portfolio">portfolio</a>
+                <a href="#contact">contact</a>
             </nav>
         </header>
         <main>
-            <section id="about"></section>
-            <section id="portfolio"></section>
-            <section id="contact"></section>
+            <!-- About me section -->
+            <section id="about">
+                <h2>About</h2><hr>
+                <div class='grid-about-wrapper'>
+                    <p class="about-me-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc elit nisl, mollis nec mi eget, vestibulum pretium diam.
+                        Integer massa leo, luctus a elit ut, pretium cursus mi. Etiam a erat accumsan, pharetra ante non, vestibulum leo. Nunc leo nulla, fringilla eu porttitor et,
+                        vulputate vitae ipsum. Maecenas sit amet ex sit amet velit rutrum euismod non nec velit. Vivamus at semper urna, eu lacinia dui.
+                        Morbi rutrum lectus id faucibus egestas. Suspendisse potenti. Nulla sed lacus sit amet nibh vehicula facilisis. Morbi vitae tempor nibh, vitae tempor nisi.</p>
+                    <figure class="image-wrapper">
+                        <img src="./resources/img/portrait2.jpg" alt="Mateusz Kuchnia portrait photo">
+                    </figure>
+                    <div class="flex-perks-wrapper">
+                        <div class='perk-card background'>
+                            <h4>Hard-working</h4>
+                        </div>
+                        <div class='perk-card background'>
+                            <h4>Professionalist</h4>
+                        </div>
+                        <div class='perk-card background'>
+                            <h4>Fast learner</h4>
+                        </div>
+                    </div>
+                    <div class="flex-perks-wrapper">
+                        <div class='perk-card foreground'>
+                            <p>zawziecie dazdy do celu, rzetelnie i z odpowiedzialnoscia podchodzi do stawianych wyzwan</p>
+                        </div>
+                        <div class='perk-card foreground'>
+                            <p>do kazdego zadania podchodzi rzeczowo, nie wybiera drogi na skroty itd</p>
+                        </div>
+                        <div class='perk-card foreground'>
+                            <p>pochlania zagadnienia szybko, ciekawy, dazacy do poznawania nowych konceptow</p>
+                        </div>
+                    </div>
+                </div>
+                <article class="skills">
+                    <h2>Skills</h2><hr>
+                    <div class="flex-skills-wrapper">
+                        <figure class="skill-card">
+                            <img src="./resources/img/html-5.svg" alt="HTML5 logo">
+                        </figure>
+                        <figure class="skill-card">
+                            <img src="./resources/img/css-5.svg" alt="CSS3 logo">
+                        </figure>
+                        <figure class="skill-card">
+                            <img src="./resources/img/javascript-4.svg" alt="JavaScript logo">
+                        </figure>
+                        <figure class="skill-card">
+                            <img src="./resources/img/git.svg" alt="Git logo">
+                        </figure>
+                        <figure class="skill-card">
+                            <img src="./resources/img/terminal-1.svg" alt="Terminal logo">
+                        </figure>
+                    </div>
+                </article>
+            </section>
+            <!-- Portfolio section -->
+            <section id="portfolio">
+                <h2>Projects</h2><hr>
+                <div class='projects-grid'>
+                    <a href="https://kchn9.github.io/wacade-flean-cleaning-service/" target="_blank">
+                        <figure class='project-holder'>
+                            <img src="./resources/img/wacade-flean-thumb.png" alt="WacadeFlean website thumbnail">
+                            <figcaption>Cleaning service commercial website. <br> Feel free to click and visit.</figcaption>
+                        </figure>
+                    </a>
+                </div>
+            </section>
+            <!-- Contact section -->
+            <section id="contact">
+                <h2>Contact me</h2><hr>
+                <form class="email-wrapper" action="mailto:mat.kuchnia@gmail.com" method="POST" enctype="text/plain">
+                    <div class='first-name-wrapper input-containter'>
+                        <input type="text" name="first-name" id="first-name">
+                        <label for="first-name">First name (optional)</label>
+                    </div>
+                    <div class='last-name-wrapper input-containter'>
+                        <input type="text" name="last-name" id="last-name">
+                        <label for="last-name">Last name (optional)</label>
+                    </div>
+                    <div class='email-address-wrapper input-containter'>
+                        <input type='text' name='e-mail' id='e-mail' required="required" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+                        <label for="e-mail">Your e-mail</label>
+                    </div>
+                    <div class="message-wrapper input-containter">
+                        <textarea id="message" name="message" rows="4" cols="30" required="required" placeholder="Feel free to message me :)" maxlength="1024"></textarea>
+                    </div>
+                    <div class="submit-wrapper">
+                        <input class='submit-button' type="submit" value="Send">
+                    </div>
+                </form>
+                <article class="social">
+                    <h3>..or find me there</h3><hr>
+                    <div class='social-wrapper'>
+                        <a id="linkedin-link" class="social-link" href="https://www.linkedin.com" target="_blank">
+                            <img src="./resources/img/linkedin.svg" alt="LinkedIn logo">
+                        </a>
+                        <a id="github-link" class="social-link" href="https://www.github.com/kchn9" target="_blank">
+                            <img src="./resources/img/github-2.svg" alt="GitHub logo">
+                        </a>
+                    </div>
+                </article>
+            </section>
         </main>
+        <footer>
+            <div class="quotes-slider">
+                
+            </div>
+            <div class="copyright">
+                <p>Created by Mateusz Kuchnia. All rights reserved.</p>
+            </div>
+        </footer>
+        <script src="resources/js/test.js"></script>
     </body>
 </html>
